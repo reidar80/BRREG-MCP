@@ -1,18 +1,70 @@
 {
   "name": "brreg-mcp-server",
   "version": "1.0.0",
-  "description": "MCP server for Norwegian Business Registry API",
+  "description": "MCP server for Norwegian Business Registry (Brønnøysundregistrene) API - access Norwegian company data, board members, subsidiaries, and organizational information",
   "main": "dist/brreg-mcp-server.js",
+  "bin": {
+    "brreg-mcp": "dist/brreg-mcp-server.js"
+  },
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "start": "node dist/brreg-mcp-server.js",
-    "dev": "tsc && node dist/brreg-mcp-server.js"
+    "dev": "tsc && node dist/brreg-mcp-server.js",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist",
+    "test": "echo \"Tests not implemented yet\" && exit 0"
   },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "norway",
+    "norwegian",
+    "business-registry",
+    "brreg",
+    "enhetsregisteret",
+    "norwegian-companies",
+    "company-data",
+    "corporate-data",
+    "business-intelligence",
+    "due-diligence",
+    "brønnøysundregistrene",
+    "api-client",
+    "claude",
+    "ai-tools"
+  ],
+  "author": "Reidar J. Boldevin <reidar.boldevin@outlook.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reidar80/brreg-mcp-server.git"
+  },
+  "homepage": "https://github.com/reidar80/brreg-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/reidar80/brreg-mcp-server/issues"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/yourusername"
   }
 }
