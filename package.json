@@ -8,7 +8,7 @@
   },
   "type": "commonjs",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/brreg-mcp-server.js",
     "dev": "tsc && node dist/brreg-mcp-server.js",
     "prepublishOnly": "npm run build",
@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.2"
   },
   "engines": {
     "node": ">=18.0.0",
